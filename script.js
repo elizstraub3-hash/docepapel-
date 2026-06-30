@@ -41,7 +41,7 @@ function enviarOrcamento(e) {
     mensagem ? `📝 Detalhes: ${mensagem}` : '',
   ].filter(Boolean).join('\n');
 
-  const url = `https://wa.me/5511999999999?text=${encodeURIComponent(texto)}`;
+  const url = `https://wa.me/5541987147287?text=${encodeURIComponent(texto)}`;
   window.open(url, '_blank');
 }
 
