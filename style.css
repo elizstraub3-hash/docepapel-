@@ -492,7 +492,24 @@ body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--b
 
 /* ── FOOTER ── */
 .footer { background: var(--dark); padding: 40px 0; }
-.footer-inner { display: flex; flex-direction: column; align-items: center; gap: 12px; text-align: center; }
+.footer-inner {
+  display: flex; flex-direction: column; align-items: center;
+  gap: 32px; text-align: center;
+}
+.footer-contato-titulo {
+  font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em;
+  text-transform: uppercase; color: rgba(255,255,255,0.45);
+  margin-bottom: 12px;
+}
+.footer-contato-links {
+  display: flex; flex-direction: column; gap: 10px; align-items: center;
+}
+.footer-wpp-link {
+  font-size: 0.88rem; color: rgba(255,255,255,0.75);
+  text-decoration: none; transition: color 0.2s;
+}
+a.footer-wpp-link:hover { color: var(--pink); }
+.footer-bottom { display: flex; flex-direction: column; gap: 4px; }
 .footer-copy   { font-size: 0.82rem; color: rgba(255,255,255,0.4); }
 .footer-credit { font-size: 0.78rem; color: rgba(255,255,255,0.25); }
 
