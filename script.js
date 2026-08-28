@@ -28,9 +28,7 @@ function enviar(e) {
 
   const dataFmt = new Date(data + 'T12:00:00').toLocaleDateString('pt-BR');
 
-  // Cálculo automático do preço estimado (cadeira R$50 + mesa R$80 = R$280/jogo)
   const qtd = parseInt(jogos);
-  const totalEstimado = (qtd * 280).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
 
   const texto = [
     'Olá, Zé Locações! 🎉 Quero fazer um orçamento:',
@@ -42,7 +40,6 @@ function enviar(e) {
     `🪑 Jogos de mesa: ${qtd} jogos (1 mesa + 4 cadeiras cada)`,
     avulso && avulso !== 'Não, só jogos completos' ? `➕ Avulsos: ${avulso}` : '',
     tipo   ? `🎊 Tipo de evento: ${tipo}` : '',
-    `💰 Estimativa: ${totalEstimado} (sem taxa de deslocamento)`,
     msg    ? `📝 Observações: ${msg}` : '',
     '',
     'Li e aceito os Termos e Regras de Locação.',
