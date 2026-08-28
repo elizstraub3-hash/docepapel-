@@ -34,7 +34,7 @@ body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--b
 }
 .logo { display: flex; align-items: center; }
 .logo-img {
-  height: 56px;
+  height: 80px;
   width: auto;
   object-fit: contain;
   border-radius: 10px;
