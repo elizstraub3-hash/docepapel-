@@ -25,26 +25,41 @@ document.querySelectorAll('.mobile-nav a').forEach(a =>
 // Formulário → WhatsApp
 function enviar(e) {
   e.preventDefault();
-  const nome = document.getElementById('nome').value.trim();
-  const tel  = document.getElementById('tel').value.trim();
-  const data = document.getElementById('data').value;
-  const tipo = document.getElementById('tipo').value;
-  const msg  = document.getElementById('msg').value.trim();
+  const nome     = document.getElementById('nome').value.trim();
+  const tel      = document.getElementById('tel').value.trim();
+  const data     = document.getElementById('data').value;
+  const endereco = document.getElementById('endereco').value.trim();
+  const jogos    = document.getElementById('jogos').value.trim();
+  const avulso   = document.getElementById('avulso').value;
+  const tipo     = document.getElementById('tipo').value;
+  const msg      = document.getElementById('msg').value.trim();
 
-  if (!nome || !tel || !data) {
-    alert('Preencha nome, WhatsApp e data do evento.');
+  if (!nome || !tel || !data || !endereco || !jogos) {
+    alert('Preencha todos os campos obrigatórios: nome, WhatsApp, data, endereço e quantidade de jogos.');
     return;
   }
 
   const dataFmt = new Date(data + 'T12:00:00').toLocaleDateString('pt-BR');
+
+  // Cálculo automático do preço estimado
+  const qtd = parseInt(jogos);
+  let precoJogo = qtd > 10 ? 15 : qtd > 3 ? 20 : 25;
+  const totalEstimado = (qtd * precoJogo).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+
   const texto = [
-    'Olá, Zé Locações! 🎉',
+    'Olá, Zé Locações! 🎉 Quero fazer um orçamento:',
     '',
     `👤 Nome: ${nome}`,
     `📱 WhatsApp: ${tel}`,
-    `📅 Data: ${dataFmt}`,
-    tipo ? `🎊 Evento: ${tipo}` : '',
-    msg  ? `📝 Detalhes: ${msg}` : '',
+    `📅 Data do evento: ${dataFmt}`,
+    `📍 Endereço: ${endereco}`,
+    `🪑 Jogos de mesa: ${qtd} jogos (1 mesa + 4 cadeiras cada)`,
+    avulso && avulso !== 'Não, só jogos completos' ? `➕ Avulsos: ${avulso}` : '',
+    tipo   ? `🎊 Tipo de evento: ${tipo}` : '',
+    `💰 Estimativa: ${totalEstimado} (sem taxa de deslocamento)`,
+    msg    ? `📝 Observações: ${msg}` : '',
+    '',
+    'Li e aceito os Termos e Regras de Locação.',
   ].filter(Boolean).join('\n');
 
   window.open(`https://wa.me/5541987147287?text=${encodeURIComponent(texto)}`, '_blank');

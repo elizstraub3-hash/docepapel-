@@ -334,6 +334,54 @@ body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--b
   outline: none; border-color: var(--pink);
 }
 
+/* ── TERMOS ── */
+.termos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 40px;
+}
+.termo-card {
+  background: white;
+  border-radius: var(--radius);
+  padding: 24px 22px;
+  box-shadow: var(--shadow);
+}
+.termo-icon {
+  width: 44px; height: 44px; border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.2rem; margin-bottom: 14px;
+}
+.termo-card h4 {
+  font-size: 0.95rem; font-weight: 700; color: var(--dark);
+  margin-bottom: 12px;
+}
+.termo-card ul {
+  list-style: none; padding: 0;
+  display: flex; flex-direction: column; gap: 7px;
+}
+.termo-card ul li {
+  font-size: 0.85rem; color: var(--muted); line-height: 1.5;
+  padding-left: 14px; position: relative;
+}
+.termo-card ul li::before {
+  content: '•'; position: absolute; left: 0;
+  color: var(--pink); font-weight: 700;
+}
+.form-termos {
+  font-size: 0.78rem; color: var(--muted);
+  margin-bottom: 14px; line-height: 1.5;
+}
+.form-termos a { color: var(--pink); text-decoration: none; font-weight: 600; }
+.form-termos a:hover { text-decoration: underline; }
+
+@media (max-width: 900px) {
+  .termos-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 600px) {
+  .termos-grid { grid-template-columns: 1fr; }
+}
+
 /* ── FOOTER ── */
 .footer { background: var(--dark); padding: 40px 0; }
 .footer-inner { display: flex; flex-direction: column; align-items: center; gap: 12px; text-align: center; }
