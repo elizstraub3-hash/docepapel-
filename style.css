@@ -70,6 +70,16 @@ body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--b
 .hero {
   background: linear-gradient(155deg, #FDF0F5 0%, #F0F8FC 50%, #FBF6EE 100%);
   padding: 80px 0 70px;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('pattern2.png') center/cover no-repeat;
+  opacity: 0.07;
+  pointer-events: none;
 }
 .hero-inner {
   display: grid; grid-template-columns: 1fr 420px;
@@ -91,10 +101,10 @@ body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--b
 .hero-slider {
   position: relative;
   width: 100%; max-width: 460px;
-  border-radius: 20px;
+  border-radius: 24px;
   overflow: hidden;
-  box-shadow: 0 16px 48px rgba(0,0,0,0.12);
-  background: #f5f0f8;
+  box-shadow: 0 20px 60px rgba(244,140,176,0.25);
+  background: linear-gradient(160deg, #FDE8F2 0%, #DDF1F6 100%);
   aspect-ratio: 1 / 1;
 }
 .slider-track {
@@ -108,7 +118,8 @@ body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--b
 }
 .slide img {
   width: 100%; height: 100%;
-  object-fit: cover; object-position: center top;
+  object-fit: contain; object-position: center bottom;
+  padding: 10px;
 }
 
 .slider-arrow {
@@ -174,7 +185,18 @@ body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--b
 
 /* ── SEÇÕES ── */
 .section { padding: 90px 0; }
-.bg-soft { background: var(--soft); }
+.bg-soft {
+  background-color: var(--soft);
+  position: relative;
+}
+.bg-soft::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('pattern1.png') center/600px repeat;
+  opacity: 0.04;
+  pointer-events: none;
+}
 
 .section-label {
   font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em;
