@@ -30,7 +30,7 @@ function enviarOrcamento(e) {
   const dataFormatada = data ? new Date(data + 'T12:00:00').toLocaleDateString('pt-BR') : '';
 
   const texto = [
-    `Olá, Zeca Locações! 🎉`,
+    `Olá, Zé Locações! 🎉`,
     ``,
     `*Solicitação de Orçamento*`,
     `👤 Nome: ${nome}`,
