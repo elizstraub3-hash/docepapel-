@@ -3,424 +3,225 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Zé Locações – Mesas, Cadeiras e Muito Mais!</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Zé Locações – Mesas e Cadeiras</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- HEADER / NAV -->
+  <!-- HEADER -->
   <header class="header">
-    <div class="container nav-container">
+    <div class="container nav-wrap">
       <div class="logo">
-        <img src="logo.png" alt="Zé Locações" onerror="this.style.display='none'; document.getElementById('logoFallback').style.display='flex';" />
-        <div class="logo-fallback" id="logoFallback" style="display:none">
-          <span class="logo-icon">🎉</span>
-          <span class="logo-text"><span class="pink">Z</span><span class="peach">E</span><span class="blue">C</span><span class="green">A</span> Locações</span>
-        </div>
+        <img src="logo.png" alt="Zé Locações" class="logo-img"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+        <span class="logo-text" style="display:none">
+          <span class="z">Z</span><span class="e">é</span> <span class="loc">Locações</span>
+        </span>
       </div>
       <nav class="nav">
-        <a href="#inicio">Início</a>
-        <a href="#catalogo">Catálogo</a>
+        <a href="#servicos">Serviços</a>
         <a href="#precos">Preços</a>
-        <a href="#como-funciona">Como Funciona</a>
         <a href="#contato">Contato</a>
       </nav>
-      <a href="#contato" class="btn btn-header">Solicitar Orçamento</a>
+      <a href="https://wa.me/5541987147287?text=Olá!%20Gostaria%20de%20um%20orçamento." class="btn-wpp" target="_blank">
+        WhatsApp
+      </a>
       <button class="hamburger" id="hamburger">&#9776;</button>
     </div>
-    <div class="mobile-menu" id="mobileMenu">
-      <a href="#inicio">Início</a>
-      <a href="#catalogo">Catálogo</a>
+    <div class="mobile-nav" id="mobileNav">
+      <a href="#servicos">Serviços</a>
       <a href="#precos">Preços</a>
-      <a href="#como-funciona">Como Funciona</a>
       <a href="#contato">Contato</a>
+      <a href="https://wa.me/5541987147287" class="btn-wpp" target="_blank" style="text-align:center">WhatsApp</a>
     </div>
   </header>
 
   <!-- HERO -->
-  <section class="hero" id="inicio">
-    <div class="hero-bg-shapes">
-      <div class="shape shape1"></div>
-      <div class="shape shape2"></div>
-      <div class="shape shape3"></div>
-    </div>
-    <div class="container hero-content">
+  <section class="hero">
+    <div class="container hero-inner">
       <div class="hero-text">
-        <span class="badge">🏆 Número 1 da Região</span>
-        <h1>Transforme sua <span class="highlight">festa</span> em um evento inesquecível!</h1>
-        <p>Locação de mesas, cadeiras, toalhas e muito mais. Entrega e retirada no local. Atendemos toda a região!</p>
-        <div class="hero-ctas">
-          <a href="#precos" class="btn btn-primary">Ver Preços</a>
-          <a href="https://wa.me/5541987147287?text=Olá%20Zeca%20Locações!%20Gostaria%20de%20um%20orçamento." class="btn btn-whatsapp" target="_blank">
-            💬 Falar no WhatsApp
-          </a>
-        </div>
-        <div class="hero-stats">
-          <div class="stat"><strong>+5.000</strong><span>Eventos</span></div>
-          <div class="stat"><strong>15 anos</strong><span>de experiência</span></div>
-          <div class="stat"><strong>100%</strong><span>Satisfação</span></div>
+        <p class="hero-eyebrow">Locação de mesas e cadeiras em Curitiba/PR</p>
+        <h1>Tudo o que seu<br><span>evento precisa,</span><br>entregue na hora.</h1>
+        <p class="hero-sub">Atendemos festas, confraternizações, casamentos e eventos corporativos. Entrega, montagem e retirada inclusos.</p>
+        <div class="hero-actions">
+          <a href="https://wa.me/5541987147287?text=Olá!%20Quero%20um%20orçamento." class="btn-primary" target="_blank">Solicitar Orçamento</a>
+          <a href="#servicos" class="btn-ghost">Ver Serviços</a>
         </div>
       </div>
-      <div class="hero-logo-box">
-        <img
-          src="logo.png"
-          alt="Zé Locações – Mesas, Cadeiras e Eventos"
-          class="hero-logo-img"
-          onerror="this.parentElement.innerHTML='<div class=\'hero-logo-placeholder\'><span class=\'emoji\'>🎉</span><p>Zé Locações</p><small>Adicione logo.png ao projeto</small></div>'"
-        />
+      <div class="hero-logo">
+        <img src="logo.png" alt="Zé Locações"
+          onerror="this.parentElement.style.display='none'" />
       </div>
     </div>
   </section>
 
   <!-- DIFERENCIAIS -->
-  <section class="diferenciais">
-    <div class="container diferenciais-grid">
-      <div class="diferencial">
-        <span>🚚</span>
-        <h3>Entrega e Retirada</h3>
-        <p>Montamos e desmontamos tudo no local do evento.</p>
-      </div>
-      <div class="diferencial">
-        <span>🧼</span>
-        <h3>Higienizados</h3>
-        <p>Todos os itens são lavados e higienizados antes de cada entrega.</p>
-      </div>
-      <div class="diferencial">
-        <span>💳</span>
-        <h3>Facilidade de Pagamento</h3>
-        <p>Pix, cartão ou dinheiro. Parcelamos em até 6x!</p>
-      </div>
-      <div class="diferencial">
-        <span>📞</span>
-        <h3>Atendimento Rápido</h3>
-        <p>Respondemos em minutos pelo WhatsApp.</p>
-      </div>
+  <div class="strip">
+    <div class="container strip-grid">
+      <div class="strip-item"><span class="strip-icon">🚚</span><span>Entrega e retirada</span></div>
+      <div class="strip-item"><span class="strip-icon">🧼</span><span>Itens higienizados</span></div>
+      <div class="strip-item"><span class="strip-icon">📱</span><span>Resposta rápida</span></div>
+      <div class="strip-item"><span class="strip-icon">💳</span><span>Pix, cartão ou dinheiro</span></div>
     </div>
-  </section>
+  </div>
 
-  <!-- CATÁLOGO -->
-  <section class="catalogo" id="catalogo">
+  <!-- SERVIÇOS -->
+  <section class="section" id="servicos">
     <div class="container">
-      <div class="catalogo-grid">
+      <div class="section-label">O que oferecemos</div>
+      <h2 class="section-title">Nossos Serviços</h2>
+      <div class="cards-grid">
 
-        <div class="catalogo-card">
-          <div class="card-img" style="background:#FFF3CD">
-            <span>🪑</span>
-          </div>
-          <div class="card-body">
-            <h3>Cadeira Plástica</h3>
-            <p>Resistente e confortável. Disponível em branco e colorido.</p>
-            <div class="card-price">R$ 2,00 <small>/unidade</small></div>
-            <a href="https://wa.me/5541987147287?text=Quero%20locar%20cadeiras%20plásticas" class="btn btn-card" target="_blank">Solicitar</a>
-          </div>
+        <div class="card">
+          <div class="card-icon pink-bg">🪑</div>
+          <h3>Cadeiras</h3>
+          <p>Cadeiras plásticas, Tiffany e Bistrô. Confortáveis e em ótimo estado para qualquer tipo de evento.</p>
+          <ul>
+            <li>Cadeira Plástica</li>
+            <li>Cadeira Tiffany</li>
+            <li>Cadeira Bistrô</li>
+          </ul>
         </div>
 
-        <div class="catalogo-card">
-          <div class="card-img" style="background:#D4EDDA">
-            <span>🪑</span>
-          </div>
-          <div class="card-body">
-            <h3>Cadeira Tiffany</h3>
-            <p>Elegante e delicada, ideal para casamentos e festas de 15 anos.</p>
-            <div class="card-price">R$ 5,00 <small>/unidade</small></div>
-            <a href="https://wa.me/5541987147287?text=Quero%20locar%20cadeiras%20Tiffany" class="btn btn-card" target="_blank">Solicitar</a>
-          </div>
+        <div class="card">
+          <div class="card-icon blue-bg">🪵</div>
+          <h3>Mesas</h3>
+          <p>Mesas plásticas, redondas e bistrô para todos os formatos de evento, indoor ou outdoor.</p>
+          <ul>
+            <li>Mesa Plástica 1,80m</li>
+            <li>Mesa Redonda 1,20m</li>
+            <li>Mesa Bistrô (alta)</li>
+          </ul>
         </div>
 
-        <div class="catalogo-card">
-          <div class="card-img" style="background:#FCE4EC">
-            <span>🪑</span>
-          </div>
-          <div class="card-body">
-            <h3>Cadeira Bistrô</h3>
-            <p>Estilo moderno. Perfeita para eventos ao ar livre e lounges.</p>
-            <div class="card-price">R$ 6,00 <small>/unidade</small></div>
-            <a href="https://wa.me/5541987147287?text=Quero%20locar%20cadeiras%20Bistrô" class="btn btn-card" target="_blank">Solicitar</a>
-          </div>
+        <div class="card">
+          <div class="card-icon peach-bg">📦</div>
+          <h3>Pacotes Completos</h3>
+          <p>Monte o conjunto ideal para o seu evento. Combinar mesas e cadeiras garante melhor preço!</p>
+          <ul>
+            <li>Pacote Básico</li>
+            <li>Pacote Festa</li>
+            <li>Pacote Premium</li>
+          </ul>
         </div>
-
-        <div class="catalogo-card">
-          <div class="card-img" style="background:#E3F2FD">
-            <span>🪵</span>
-          </div>
-          <div class="card-body">
-            <h3>Mesa Plástica (1,80m)</h3>
-            <p>Retangular, comporta até 8 pessoas. Resistente e fácil de montar.</p>
-            <div class="card-price">R$ 8,00 <small>/unidade</small></div>
-            <a href="https://wa.me/5541987147287?text=Quero%20locar%20mesa%20plástica" class="btn btn-card" target="_blank">Solicitar</a>
-          </div>
-        </div>
-
-        <div class="catalogo-card">
-          <div class="card-img" style="background:#EDE7F6">
-            <span>🟤</span>
-          </div>
-          <div class="card-body">
-            <h3>Mesa Redonda (1,20m)</h3>
-            <p>Comporta até 6 pessoas. Ideal para casamentos e formaturas.</p>
-            <div class="card-price">R$ 12,00 <small>/unidade</small></div>
-            <a href="https://wa.me/5541987147287?text=Quero%20locar%20mesa%20redonda" class="btn btn-card" target="_blank">Solicitar</a>
-          </div>
-        </div>
-
-        <div class="catalogo-card">
-          <div class="card-img" style="background:#FFF8E1">
-            <span>🍽️</span>
-          </div>
-          <div class="card-body">
-            <h3>Mesa Bistrô (alta)</h3>
-            <p>Mesa alta para coquetel e eventos em pé. Muito estilo!</p>
-            <div class="card-price">R$ 15,00 <small>/unidade</small></div>
-            <a href="https://wa.me/5541987147287?text=Quero%20locar%20mesa%20bistrô" class="btn btn-card" target="_blank">Solicitar</a>
-          </div>
-        </div>
-
 
       </div>
     </div>
   </section>
 
-  <!-- TABELA DE PREÇOS -->
-  <section class="precos" id="precos">
+  <!-- PREÇOS -->
+  <section class="section bg-soft" id="precos">
     <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Transparência total</span>
-        <h2>Tabela de Preços</h2>
-        <p>Preços por diária (até 24h). Precisando de mais dias, entre em contato!</p>
-      </div>
+      <div class="section-label">Transparência total</div>
+      <h2 class="section-title">Preços por Diária</h2>
+      <p class="section-sub">Valores por unidade, por período de até 24h. Descontos para grandes volumes.</p>
 
-      <div class="precos-packages">
+      <div class="price-tables">
 
-        <div class="package">
-          <div class="package-header pkg-basic">
-            <span class="pkg-icon">🌟</span>
-            <h3>Pacote Básico</h3>
-            <p>Para festinhas e reuniões</p>
+        <div class="price-block">
+          <div class="price-block-header pink-border">
+            <span class="price-icon">🪑</span>
+            <h3>Cadeiras</h3>
           </div>
-          <div class="package-body">
-            <ul>
-              <li>✅ 10 Mesas plásticas</li>
-              <li>✅ 80 Cadeiras plásticas</li>
-              <li>✅ Entrega e retirada inclusa</li>
-            </ul>
-            <div class="package-price">
-              <span class="price-label">A partir de</span>
-              <span class="price-value">R$ 249,90</span>
-              <span class="price-period">/diária</span>
-            </div>
-            <a href="https://wa.me/5541987147287?text=Quero%20o%20Pacote%20Básico!" class="btn btn-primary" target="_blank">Quero Este!</a>
-          </div>
+          <table class="price-table">
+            <tbody>
+              <tr><td>Cadeira Plástica</td><td class="price">R$ 2,00</td></tr>
+              <tr><td>Cadeira Tiffany</td><td class="price">R$ 5,00</td></tr>
+              <tr><td>Cadeira Bistrô</td><td class="price">R$ 6,00</td></tr>
+            </tbody>
+          </table>
         </div>
 
-        <div class="package featured">
-          <div class="package-badge">🔥 Mais Popular</div>
-          <div class="package-header pkg-popular">
-            <span class="pkg-icon">🎉</span>
-            <h3>Pacote Festa</h3>
-            <p>Ideal para aniversários e formaturas</p>
+        <div class="price-block">
+          <div class="price-block-header blue-border">
+            <span class="price-icon">🪵</span>
+            <h3>Mesas</h3>
           </div>
-          <div class="package-body">
-            <ul>
-              <li>✅ 20 Mesas redondas</li>
-              <li>✅ 160 Cadeiras Tiffany</li>
-
-              <li>✅ Entrega, montagem e retirada</li>
-            </ul>
-            <div class="package-price">
-              <span class="price-label">A partir de</span>
-              <span class="price-value">R$ 699,90</span>
-              <span class="price-period">/diária</span>
-            </div>
-            <a href="https://wa.me/5541987147287?text=Quero%20o%20Pacote%20Festa!" class="btn btn-primary" target="_blank">Quero Este!</a>
-          </div>
+          <table class="price-table">
+            <tbody>
+              <tr><td>Mesa Plástica 1,80m</td><td class="price">R$ 8,00</td></tr>
+              <tr><td>Mesa Redonda 1,20m</td><td class="price">R$ 12,00</td></tr>
+              <tr><td>Mesa Bistrô (alta)</td><td class="price">R$ 15,00</td></tr>
+            </tbody>
+          </table>
         </div>
 
-        <div class="package">
-          <div class="package-header pkg-premium">
-            <span class="pkg-icon">👑</span>
-            <h3>Pacote Premium</h3>
-            <p>Para casamentos e eventos corporativos</p>
+        <div class="price-block">
+          <div class="price-block-header peach-border">
+            <span class="price-icon">📦</span>
+            <h3>Pacotes</h3>
           </div>
-          <div class="package-body">
-            <ul>
-              <li>✅ 30 Mesas redondas</li>
-              <li>✅ 240 Cadeiras Tiffany</li>
-
-              <li>✅ Entrega, montagem e retirada</li>
-              <li>✅ Suporte no dia do evento</li>
-            </ul>
-            <div class="package-price">
-              <span class="price-label">A partir de</span>
-              <span class="price-value">R$ 1.299,90</span>
-              <span class="price-period">/diária</span>
-            </div>
-            <a href="https://wa.me/5541987147287?text=Quero%20o%20Pacote%20Premium!" class="btn btn-primary" target="_blank">Quero Este!</a>
-          </div>
+          <table class="price-table">
+            <tbody>
+              <tr><td>Básico (10 mesas + 80 cadeiras)</td><td class="price">R$ 249,90</td></tr>
+              <tr><td>Festa (20 mesas + 160 cadeiras)</td><td class="price">R$ 699,90</td></tr>
+              <tr><td>Premium (30 mesas + 240 cadeiras)</td><td class="price">R$ 1.299,90</td></tr>
+            </tbody>
+          </table>
         </div>
 
       </div>
 
-      <!-- Tabela unitária -->
-      <div class="tabela-wrapper">
-        <h3>Preços Unitários</h3>
-        <table class="tabela-precos">
-          <thead>
-            <tr>
-              <th>Item</th>
-              <th>Descrição</th>
-              <th>Preço/Diária</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr><td>🪑 Cadeira Plástica</td><td>Branca ou colorida</td><td>R$ 2,00</td></tr>
-            <tr><td>🪑 Cadeira Tiffany</td><td>Branca ou transparente</td><td>R$ 5,00</td></tr>
-            <tr><td>🪑 Cadeira Bistrô</td><td>Preta ou branca</td><td>R$ 6,00</td></tr>
-            <tr><td>🪵 Mesa Plástica 1,80m</td><td>Retangular, 8 pessoas</td><td>R$ 8,00</td></tr>
-            <tr><td>🟤 Mesa Redonda 1,20m</td><td>6 pessoas</td><td>R$ 12,00</td></tr>
-            <tr><td>🍽️ Mesa Bistrô (Alta)</td><td>Coquetel e pé</td><td>R$ 15,00</td></tr>
-          </tbody>
-        </table>
-        <p class="tabela-obs">* Entrega e retirada com cobrança conforme distância. Consulte-nos! Descontos especiais para grandes volumes.</p>
-      </div>
+      <p class="price-obs">* Entrega e retirada conforme distância. Entre em contato para um orçamento personalizado.</p>
     </div>
   </section>
 
-  <!-- COMO FUNCIONA -->
-  <section class="como-funciona" id="como-funciona">
-    <div class="container">
-      <div class="section-header light">
-        <span class="section-tag">Simples assim!</span>
-        <h2>Como Funciona?</h2>
-        <p>Do pedido até a sua festa em 4 passos fáceis</p>
-      </div>
-      <div class="steps">
-        <div class="step">
-          <div class="step-number">1</div>
-          <div class="step-content">
-            <h3>Entre em Contato</h3>
-            <p>Fale com a gente pelo WhatsApp ou formulário. Diga a data e a quantidade de itens que precisa.</p>
-          </div>
-        </div>
-        <div class="step-arrow">→</div>
-        <div class="step">
-          <div class="step-number">2</div>
-          <div class="step-content">
-            <h3>Receba o Orçamento</h3>
-            <p>Enviaremos o orçamento completo rapidinho, com tudo detalhado e sem surpresas.</p>
-          </div>
-        </div>
-        <div class="step-arrow">→</div>
-        <div class="step">
-          <div class="step-number">3</div>
-          <div class="step-content">
-            <h3>Confirme e Pague</h3>
-            <p>Pix, cartão ou dinheiro. Reservamos os itens para o seu evento.</p>
-          </div>
-        </div>
-        <div class="step-arrow">→</div>
-        <div class="step">
-          <div class="step-number">4</div>
-          <div class="step-content">
-            <h3>Entregamos na Hora!</h3>
-            <p>Nossa equipe entrega, monta e retira tudo. Você só aproveita a festa!</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  <!-- CONTATO -->
+  <section class="section" id="contato">
+    <div class="container contato-wrap">
 
-  <!-- DEPOIMENTOS -->
-  <section class="depoimentos">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Quem já usou aprova!</span>
-        <h2>Depoimentos</h2>
-      </div>
-      <div class="depoimentos-grid">
-        <div class="depoimento">
-          <div class="stars">⭐⭐⭐⭐⭐</div>
-          <p>"Serviço impecável! Fizemos o aniversário de 15 anos da minha filha e tudo ficou lindo. Entregaram no horário e montaram com cuidado."</p>
-          <div class="depoimento-autor">
-            <div class="avatar">MR</div>
-            <div><strong>Maria Regina</strong><span>Aniversário de 15 anos</span></div>
-          </div>
-        </div>
-        <div class="depoimento">
-          <div class="stars">⭐⭐⭐⭐⭐</div>
-          <p>"Preço justo e atendimento excelente! Alugamos mesas e cadeiras para o churrasco de empresa. Todo mundo elogiou a organização."</p>
-          <div class="depoimento-autor">
-            <div class="avatar">JS</div>
-            <div><strong>João Silva</strong><span>Evento corporativo</span></div>
-          </div>
-        </div>
-        <div class="depoimento">
-          <div class="stars">⭐⭐⭐⭐⭐</div>
-          <p>"Usei na minha formatura e fiquei encantada! As cadeiras Tiffany são lindas. Recomendo sem hesitar para qualquer evento!"</p>
-          <div class="depoimento-autor">
-            <div class="avatar">AP</div>
-            <div><strong>Ana Paula</strong><span>Formatura</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+      <div class="contato-left">
+        <div class="section-label">Fale com a gente</div>
+        <h2 class="section-title">Entre em Contato</h2>
+        <p>Respondemos em minutos pelo WhatsApp. Peça seu orçamento agora!</p>
 
-  <!-- CONTATO / WHATSAPP -->
-  <section class="contato" id="contato">
-    <div class="container contato-layout">
-      <div class="contato-info">
-        <span class="section-tag">Fale com a gente</span>
-        <h2>Solicite seu Orçamento</h2>
-        <p>Respondemos em minutos! Nossa equipe está pronta para te ajudar a montar o evento dos seus sonhos.</p>
-        <div class="contato-items">
-          <div class="contato-item">
-            <span>📱</span>
+        <div class="contact-items">
+          <a class="contact-item" href="https://wa.me/5541987147287" target="_blank">
+            <div class="contact-icon pink-bg">📱</div>
             <div>
-              <strong>WhatsApp – Claudia</strong>
-              <a href="https://wa.me/5541987147287" target="_blank">(41) 8714-7287</a>
+              <strong>Claudia</strong>
+              <span>(41) 8714-7287</span>
             </div>
-          </div>
-          <div class="contato-item">
-            <span>📱</span>
+          </a>
+          <a class="contact-item" href="https://wa.me/5541983700595" target="_blank">
+            <div class="contact-icon blue-bg">📱</div>
             <div>
-              <strong>WhatsApp – Oseias</strong>
-              <a href="https://wa.me/5541983700595" target="_blank">(41) 9837-0595</a>
+              <strong>Oseias</strong>
+              <span>(41) 9837-0595</span>
             </div>
-          </div>
-          <div class="contato-item">
-            <span>📍</span>
+          </a>
+          <div class="contact-item">
+            <div class="contact-icon peach-bg">⏰</div>
             <div>
-              <strong>Endereço</strong>
-              <span>Rua das Festas, 123 – Bairro Alegre – Cidade/SP</span>
-            </div>
-          </div>
-          <div class="contato-item">
-            <span>⏰</span>
-            <div>
-              <strong>Horário de Atendimento</strong>
-              <span>Segunda a Sábado: 8h às 20h | Domingo: 9h às 15h</span>
+              <strong>Horário</strong>
+              <span>Seg–Sáb: 8h às 20h | Dom: 9h às 15h</span>
             </div>
           </div>
         </div>
+
+        <a href="https://wa.me/5541987147287?text=Olá!%20Gostaria%20de%20um%20orçamento%20para%20locação%20de%20mesas%20e%20cadeiras." class="btn-primary btn-full" target="_blank">
+          💬 Chamar no WhatsApp
+        </a>
       </div>
-      <div class="contato-form">
-        <form id="orcamentoForm" onsubmit="enviarOrcamento(event)">
-          <h3>Formulário de Orçamento</h3>
-          <div class="form-group">
-            <label>Seu nome *</label>
-            <input type="text" id="nome" placeholder="Ex: Maria Silva" required />
+
+      <div class="contato-right">
+        <form id="form" onsubmit="enviar(event)">
+          <h3>Solicitar Orçamento</h3>
+          <div class="field">
+            <label>Nome *</label>
+            <input type="text" id="nome" placeholder="Seu nome" required />
           </div>
-          <div class="form-group">
+          <div class="field">
             <label>WhatsApp *</label>
-            <input type="tel" id="telefone" placeholder="(41) 8714-7287" required />
+            <input type="tel" id="tel" placeholder="(41) 99999-9999" required />
           </div>
-          <div class="form-group">
+          <div class="field">
             <label>Data do evento *</label>
             <input type="date" id="data" required />
           </div>
-          <div class="form-group">
+          <div class="field">
             <label>Tipo de evento</label>
             <select id="tipo">
               <option value="">Selecione...</option>
@@ -428,65 +229,36 @@
               <option>Casamento</option>
               <option>Formatura</option>
               <option>Churrasco</option>
-              <option>Evento Corporativo</option>
+              <option>Corporativo</option>
               <option>Outro</option>
             </select>
           </div>
-          <div class="form-group">
-            <label>Quantidade de convidados</label>
-            <input type="number" id="convidados" placeholder="Ex: 100" min="1" />
+          <div class="field">
+            <label>Mensagem</label>
+            <textarea id="msg" rows="3" placeholder="Descreva o que você precisa..."></textarea>
           </div>
-          <div class="form-group">
-            <label>Mensagem / detalhes</label>
-            <textarea id="mensagem" rows="3" placeholder="Descreva o que você precisa..."></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary btn-full">📲 Enviar pelo WhatsApp</button>
+          <button type="submit" class="btn-primary btn-full">Enviar pelo WhatsApp</button>
         </form>
       </div>
+
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer class="footer">
-    <div class="footer-stripe"></div>
-    <div class="container footer-layout">
-      <div class="footer-brand">
-        <div class="logo">
-          <img src="logo.png" alt="Zé Locações" style="height:60px; filter:brightness(0) invert(1) opacity(0.9);" onerror="this.style.display='none'; document.getElementById('logoFooter').style.display='flex';" />
-          <div class="logo-fallback" id="logoFooter" style="display:none">
-            <span class="logo-icon">🎉</span>
-            <span class="logo-text">Zé Locações</span>
-          </div>
-        </div>
-        <p>Tornando eventos especiais desde 2010. Qualidade, cuidado e pontualidade em cada entrega.</p>
+    <div class="container footer-inner">
+      <div class="footer-logo">
+        <img src="logo.png" alt="Zé Locações" style="height:48px"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
+        <span style="display:none;font-weight:800;color:white">Zé Locações</span>
       </div>
-      <div class="footer-links">
-        <h4>Links Rápidos</h4>
-        <a href="#inicio">Início</a>
-        <a href="#catalogo">Catálogo</a>
-        <a href="#precos">Preços</a>
-        <a href="#como-funciona">Como Funciona</a>
-        <a href="#contato">Contato</a>
-      </div>
-      <div class="footer-contato">
-        <h4>Contato</h4>
-        <p>📱 Claudia: (41) 8714-7287</p>
-        <p>📱 Oseias: (41) 9837-0595</p>
-        <p>📍 Rua das Festas, 123 – SP</p>
-        <p>⏰ Seg–Sáb: 8h às 20h</p>
-        <a href="https://wa.me/5541987147287" class="btn btn-whatsapp btn-sm" target="_blank">💬 WhatsApp</a>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>© 2025 Zé Locações. Todos os direitos reservados.</p>
-      <p style="margin-top:6px; opacity:0.5;">Criado por Elizandra Straub</p>
+      <p class="footer-copy">© 2025 Zé Locações. Todos os direitos reservados.</p>
+      <p class="footer-credit">Criado por Elizandra Straub</p>
     </div>
   </footer>
 
-  <!-- BOTÃO FLUTUANTE WHATSAPP -->
-  <a href="https://wa.me/5541987147287?text=Olá%20Zeca%20Locações!%20Quero%20um%20orçamento." class="whatsapp-float" target="_blank" title="Falar no WhatsApp">
-    💬
-  </a>
+  <!-- FLOAT WPP -->
+  <a href="https://wa.me/5541987147287?text=Olá%20Zé%20Locações!" class="float-wpp" target="_blank">💬</a>
 
   <script src="script.js"></script>
 </body>

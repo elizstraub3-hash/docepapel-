@@ -1,65 +1,53 @@
 // Menu mobile
-const hamburger = document.getElementById('hamburger');
-const mobileMenu = document.getElementById('mobileMenu');
-
-hamburger.addEventListener('click', () => {
-  mobileMenu.classList.toggle('open');
+document.getElementById('hamburger').addEventListener('click', () => {
+  document.getElementById('mobileNav').classList.toggle('open');
 });
 
-// Fecha menu ao clicar em um link
-mobileMenu.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => mobileMenu.classList.remove('open'));
-});
+document.querySelectorAll('.mobile-nav a').forEach(a =>
+  a.addEventListener('click', () => document.getElementById('mobileNav').classList.remove('open'))
+);
 
-// Formulário -> WhatsApp
-function enviarOrcamento(e) {
+// Formulário → WhatsApp
+function enviar(e) {
   e.preventDefault();
-
   const nome = document.getElementById('nome').value.trim();
-  const telefone = document.getElementById('telefone').value.trim();
+  const tel  = document.getElementById('tel').value.trim();
   const data = document.getElementById('data').value;
   const tipo = document.getElementById('tipo').value;
-  const convidados = document.getElementById('convidados').value;
-  const mensagem = document.getElementById('mensagem').value.trim();
+  const msg  = document.getElementById('msg').value.trim();
 
-  if (!nome || !telefone || !data) {
-    alert('Por favor, preencha nome, WhatsApp e data do evento!');
+  if (!nome || !tel || !data) {
+    alert('Preencha nome, WhatsApp e data do evento.');
     return;
   }
 
-  const dataFormatada = data ? new Date(data + 'T12:00:00').toLocaleDateString('pt-BR') : '';
-
+  const dataFmt = new Date(data + 'T12:00:00').toLocaleDateString('pt-BR');
   const texto = [
-    `Olá, Zé Locações! 🎉`,
-    ``,
-    `*Solicitação de Orçamento*`,
+    'Olá, Zé Locações! 🎉',
+    '',
     `👤 Nome: ${nome}`,
-    `📱 WhatsApp: ${telefone}`,
-    `📅 Data do evento: ${dataFormatada}`,
-    tipo ? `🎊 Tipo de evento: ${tipo}` : '',
-    convidados ? `👥 Convidados: ${convidados}` : '',
-    mensagem ? `📝 Detalhes: ${mensagem}` : '',
+    `📱 WhatsApp: ${tel}`,
+    `📅 Data: ${dataFmt}`,
+    tipo ? `🎊 Evento: ${tipo}` : '',
+    msg  ? `📝 Detalhes: ${msg}` : '',
   ].filter(Boolean).join('\n');
 
-  const url = `https://wa.me/5541987147287?text=${encodeURIComponent(texto)}`;
-  window.open(url, '_blank');
+  window.open(`https://wa.me/5541987147287?text=${encodeURIComponent(texto)}`, '_blank');
 }
 
-// Scroll suave para header fixo
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    const target = document.querySelector(this.getAttribute('href'));
+// Scroll suave
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const target = document.querySelector(a.getAttribute('href'));
     if (target) {
       e.preventDefault();
-      const offset = 80;
-      const top = target.getBoundingClientRect().top + window.scrollY - offset;
-      window.scrollTo({ top, behavior: 'smooth' });
+      window.scrollTo({ top: target.getBoundingClientRect().top + scrollY - 80, behavior: 'smooth' });
     }
   });
 });
 
-// Animação de entrada dos cards
-const observer = new IntersectionObserver((entries) => {
+// Animação de entrada
+const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.style.opacity = '1';
@@ -68,9 +56,9 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.1 });
 
-document.querySelectorAll('.catalogo-card, .package, .depoimento, .diferencial').forEach(el => {
+document.querySelectorAll('.card, .price-block, .contact-item').forEach(el => {
   el.style.opacity = '0';
-  el.style.transform = 'translateY(30px)';
-  el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+  el.style.transform = 'translateY(24px)';
+  el.style.transition = 'opacity 0.45s ease, transform 0.45s ease';
   observer.observe(el);
 });
