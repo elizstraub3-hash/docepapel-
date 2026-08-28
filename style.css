@@ -151,23 +151,6 @@ body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--b
 }
 
 /* Setas e dots */
-.hero-arrow {
-  position: absolute; top: 50%; transform: translateY(-50%);
-  background: rgba(255,255,255,0.9); border: none; cursor: pointer;
-  width: 48px; height: 48px; border-radius: 50%;
-  font-size: 1.8rem; color: var(--dark);
-  display: flex; align-items: center; justify-content: center;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
-  transition: all 0.2s; z-index: 10;
-}
-.hero-arrow:hover { background: white; transform: translateY(-50%) scale(1.08); }
-.hero-arrow.left  { left: 20px; }
-.hero-arrow.right { right: 20px; }
-
-.hero-dots {
-  position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);
-  display: flex; gap: 10px; z-index: 10;
-}
 .hero-inner {
   display: grid; grid-template-columns: 1fr 420px;
   gap: 60px; align-items: center;
@@ -184,12 +167,6 @@ body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--b
 .hero-sub { font-size: 1rem; color: var(--muted); line-height: 1.7; margin-bottom: 36px; max-width: 480px; }
 .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
 
-.dot {
-  width: 10px; height: 10px; border-radius: 50%;
-  border: none; cursor: pointer;
-  background: rgba(61,61,92,0.25); transition: all 0.3s;
-}
-.dot.active { background: var(--pink); transform: scale(1.3); }
 
 /* ── BOTÕES ── */
 .btn-primary {
