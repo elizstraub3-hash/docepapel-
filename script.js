@@ -73,6 +73,15 @@ function togglePrecos(btn) {
   rows.hidden = open;
 }
 
+// Acordeão termos
+function toggleTermo(btn) {
+  const body = btn.nextElementSibling;
+  const open = !body.hidden;
+  body.hidden = open;
+  btn.querySelector('.termo-arrow').textContent = open ? '▼' : '▲';
+  btn.classList.toggle('termo-btn-open', !open);
+}
+
 // Scroll suave
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {

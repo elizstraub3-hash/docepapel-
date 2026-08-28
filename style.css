@@ -38,7 +38,7 @@ body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--b
   width: auto;
   object-fit: contain;
   border-radius: 10px;
-  background: var(--dark);
+  background: white;
   padding: 4px 10px;
 }
 .logo-text { font-size: 1.3rem; font-weight: 800; color: var(--dark); }
@@ -401,7 +401,38 @@ body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--b
   text-shadow: 0 2px 12px rgba(0,0,0,0.4);
 }
 
-/* ── TERMOS ── */
+/* ── TERMOS ACORDEÃO ── */
+.termos-accordion {
+  display: flex; flex-direction: column; gap: 10px;
+  margin-top: 32px;
+}
+.termo-btn {
+  display: flex; align-items: center; justify-content: space-between;
+  width: 100%; padding: 18px 22px;
+  background: white; border: 1.5px solid #E2E8F0;
+  border-radius: var(--radius);
+  font-size: 0.97rem; font-weight: 600; color: var(--dark);
+  font-family: 'Inter', sans-serif; cursor: pointer;
+  transition: all 0.2s; text-align: left;
+}
+.termo-btn:hover, .termo-btn-open {
+  background: var(--soft); border-color: var(--pink);
+}
+.termo-arrow { font-size: 0.8rem; color: var(--muted); transition: transform 0.3s; flex-shrink: 0; }
+.termo-body {
+  background: var(--soft); border-radius: var(--radius);
+  padding: 20px 24px; margin-top: -4px;
+  border: 1.5px solid #E2E8F0; border-top: none;
+  border-radius: 0 0 var(--radius) var(--radius);
+}
+.termo-body ul { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+.termo-body ul li {
+  font-size: 0.88rem; color: var(--muted); line-height: 1.55;
+  padding-left: 16px; position: relative;
+}
+.termo-body ul li::before { content: '•'; position: absolute; left: 0; color: var(--pink); font-weight: 700; }
+
+/* ── TERMOS (grid antigo — mantido para compatibilidade) ── */
 .termos-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -474,7 +505,7 @@ body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--b
 @media (max-width: 900px) {
   .hero-inner        { grid-template-columns: 1fr; text-align: center; }
   .hero-slide-inner  { grid-template-columns: 1fr; text-align: center; }
-  .hero-img-wrap     { justify-content: center; }
+  .hero-img-wrap     { justify-content: center; order: -1; }
   .hero-img-wrap img, .casal-video { height: 280px; }
   .hero-actions      { justify-content: center; }
   .hero-sub          { margin: 0 auto 36px; }

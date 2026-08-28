@@ -319,11 +319,13 @@
     <div class="container">
       <div class="section-label">Importante saber</div>
       <h2 class="section-title">Termos e Regras de Locação</h2>
-      <div class="termos-grid">
 
-        <div class="termo-card">
-          <div class="termo-icon pink-bg">📦</div>
-          <h4>Reserva e Confirmação</h4>
+      <div class="termos-accordion" id="termos-accordion">
+
+        <button class="termo-btn" onclick="toggleTermo(this)">
+          <span>📦 Reserva e Confirmação</span><span class="termo-arrow">▼</span>
+        </button>
+        <div class="termo-body" hidden>
           <ul>
             <li>A reserva só é confirmada mediante sinal de <strong>50% do valor total</strong>.</li>
             <li>O sinal deve ser pago via Pix, dinheiro ou cartão.</li>
@@ -331,9 +333,10 @@
           </ul>
         </div>
 
-        <div class="termo-card">
-          <div class="termo-icon blue-bg">🚚</div>
-          <h4>Entrega e Retirada</h4>
+        <button class="termo-btn" onclick="toggleTermo(this)">
+          <span>🚚 Entrega e Retirada</span><span class="termo-arrow">▼</span>
+        </button>
+        <div class="termo-body" hidden>
           <ul>
             <li>Entrega e retirada estão inclusas no preço (dentro de Curitiba).</li>
             <li>Taxa de deslocamento para cidades da região — consulte.</li>
@@ -341,9 +344,10 @@
           </ul>
         </div>
 
-        <div class="termo-card">
-          <div class="termo-icon peach-bg">⏰</div>
-          <h4>Prazo de Devolução</h4>
+        <button class="termo-btn" onclick="toggleTermo(this)">
+          <span>⏰ Prazo de Devolução</span><span class="termo-arrow">▼</span>
+        </button>
+        <div class="termo-body" hidden>
           <ul>
             <li>Os itens devem estar disponíveis para retirada no horário acordado.</li>
             <li>Atraso na devolução pode gerar cobrança de diária adicional.</li>
@@ -351,20 +355,22 @@
           </ul>
         </div>
 
-        <div class="termo-card">
-          <div class="termo-icon pink-bg">⚠️</div>
-          <h4>Danos e Perdas</h4>
+        <button class="termo-btn" onclick="toggleTermo(this)">
+          <span>⚠️ Danos e Perdas</span><span class="termo-arrow">▼</span>
+        </button>
+        <div class="termo-body" hidden>
           <ul>
             <li>Itens devolvidos quebrados, sujos ou danificados serão cobrados.</li>
-            <li>Cadeira avulsa danificada: <strong>R$ 30,00/unidade</strong>.</li>
+            <li>Cadeira danificada: <strong>R$ 30,00/unidade</strong>.</li>
             <li>Mesa danificada: <strong>R$ 60,00/unidade</strong>.</li>
             <li>O cliente é responsável pelos itens durante o período de locação.</li>
           </ul>
         </div>
 
-        <div class="termo-card">
-          <div class="termo-icon blue-bg">❌</div>
-          <h4>Cancelamento</h4>
+        <button class="termo-btn" onclick="toggleTermo(this)">
+          <span>❌ Cancelamento</span><span class="termo-arrow">▼</span>
+        </button>
+        <div class="termo-body" hidden>
           <ul>
             <li>Cancelamento com <strong>mais de 7 dias</strong> de antecedência: sinal devolvido integralmente.</li>
             <li>Cancelamento com <strong>menos de 7 dias</strong>: sinal não reembolsável.</li>
@@ -372,9 +378,10 @@
           </ul>
         </div>
 
-        <div class="termo-card">
-          <div class="termo-icon peach-bg">✅</div>
-          <h4>Higienização</h4>
+        <button class="termo-btn" onclick="toggleTermo(this)">
+          <span>✅ Higienização</span><span class="termo-arrow">▼</span>
+        </button>
+        <div class="termo-body" hidden>
           <ul>
             <li>Todos os itens são higienizados antes de cada locação.</li>
             <li>Os equipamentos são entregues limpos e em bom estado.</li>
@@ -383,6 +390,8 @@
         </div>
 
       </div>
+
+
 
       <div class="price-obs-box" style="margin-top:32px">
         <span>📱</span>
