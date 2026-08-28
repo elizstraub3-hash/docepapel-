@@ -259,8 +259,10 @@
       </div>
 
       <div class="contato-right">
-        <form id="form" onsubmit="enviar(event)">
-          <h3>Solicitar Orçamento</h3>
+        <button class="orcamento-toggle" onclick="toggleOrcamento(this)" aria-expanded="false">
+          📋 Solicitar Orçamento <span class="toggle-arrow">▼</span>
+        </button>
+        <form id="form" onsubmit="enviar(event)" hidden>
           <div class="field">
             <label>Nome *</label>
             <input type="text" id="nome" placeholder="Seu nome" required />

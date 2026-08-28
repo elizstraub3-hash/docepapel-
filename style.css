@@ -354,9 +354,19 @@ body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--b
 
 .contato-right {
   background: var(--soft); border-radius: var(--radius);
-  padding: 36px; box-shadow: var(--shadow);
+  padding: 28px; box-shadow: var(--shadow);
 }
-.contato-right h3 { font-size: 1.15rem; font-weight: 700; color: var(--dark); margin-bottom: 24px; }
+.orcamento-toggle {
+  display: flex; align-items: center; justify-content: space-between;
+  width: 100%; padding: 18px 22px;
+  background: var(--peach); color: white;
+  border: none; border-radius: var(--radius);
+  font-size: 1rem; font-weight: 700; font-family: 'Inter', sans-serif;
+  cursor: pointer; margin-bottom: 0; transition: background 0.2s;
+}
+.orcamento-toggle:hover { background: #E88A60; }
+.orcamento-toggle[aria-expanded="true"] { border-radius: var(--radius) var(--radius) 0 0; margin-bottom: 0; }
+#form { background: white; border-radius: 0 0 var(--radius) var(--radius); padding: 24px; }
 
 .field { margin-bottom: 16px; }
 .field label { display: block; font-size: 0.82rem; font-weight: 600; color: var(--dark); margin-bottom: 6px; }

@@ -73,6 +73,15 @@ function togglePrecos(btn) {
   rows.hidden = open;
 }
 
+// Abrir/fechar formulário de orçamento
+function toggleOrcamento(btn) {
+  const form = document.getElementById('form');
+  const open = btn.getAttribute('aria-expanded') === 'true';
+  btn.setAttribute('aria-expanded', !open);
+  btn.querySelector('.toggle-arrow').textContent = open ? '▼' : '▲';
+  form.hidden = open;
+}
+
 // Acordeão termos
 function toggleTermo(btn) {
   const body = btn.nextElementSibling;
