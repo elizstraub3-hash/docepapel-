@@ -137,10 +137,17 @@ body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--b
   -webkit-mask-image: radial-gradient(ellipse 85% 85% at 50% 50%, black 50%, transparent 100%);
   mask-image: radial-gradient(ellipse 85% 85% at 50% 50%, black 50%, transparent 100%);
 }
-.hero-img-wrap.logo-slide img {
-  height: 360px;
-  object-position: center center;
-  filter: drop-shadow(0 12px 40px rgba(126,200,216,0.3));
+.hero-logo-wrap {
+  margin-bottom: 20px;
+}
+.hero-logo {
+  height: 130px;
+  width: auto;
+  object-fit: contain;
+  border-radius: 16px;
+  background: white;
+  padding: 8px 18px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
 }
 
 /* Setas e dots */
