@@ -38,36 +38,59 @@
     </div>
   </header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="container hero-inner">
-      <div class="hero-text">
-        <p class="hero-eyebrow">Locação de mesas e cadeiras em Curitiba/PR</p>
-        <h1>Tudo o que seu<br><span>evento precisa,</span><br>entregue na hora.</h1>
-        <p class="hero-sub">Atendemos festas, confraternizações, casamentos e eventos corporativos. Entrega, montagem e retirada inclusos.</p>
-        <div class="hero-actions">
-          <a href="https://wa.me/5541987147287?text=Olá!%20Quero%20um%20orçamento." class="btn-primary" target="_blank">Solicitar Orçamento</a>
-          <a href="#servicos" class="btn-ghost">Ver Serviços</a>
+  <!-- HERO SLIDER FULL WIDTH -->
+  <section class="hero-slider-section">
+
+    <div class="hero-slide-track" id="sliderTrack">
+
+      <!-- SLIDE 1 -->
+      <div class="hero-slide slide-1">
+        <div class="slide-bg" style="background-image:url('pattern2.png')"></div>
+        <div class="container hero-slide-inner">
+          <div class="hero-text">
+            <p class="hero-eyebrow">Locação de mesas e cadeiras em Curitiba/PR</p>
+            <h1>Tudo o que seu<br><span>evento precisa,</span><br>entregue na hora.</h1>
+            <p class="hero-sub">Atendemos festas, confraternizações, casamentos e eventos corporativos. Entrega, montagem e retirada inclusos.</p>
+            <div class="hero-actions">
+              <a href="https://wa.me/5541987147287?text=Olá!%20Quero%20um%20orçamento." class="btn-primary" target="_blank">Solicitar Orçamento</a>
+              <a href="#servicos" class="btn-ghost">Ver Serviços</a>
+            </div>
+          </div>
+          <div class="hero-img-wrap">
+            <img src="casal.png" alt="Claudia e Oseias – Zé Locações" />
+          </div>
         </div>
       </div>
-      <div class="hero-slider">
-        <div class="slider-track" id="sliderTrack">
-          <div class="slide">
-            <img src="casal.png" alt="Zé Locações – Claudia e Oseias"
-              onerror="this.src='logo.png'" />
+
+      <!-- SLIDE 2 -->
+      <div class="hero-slide slide-2">
+        <div class="slide-bg" style="background-image:url('pattern1.png')"></div>
+        <div class="container hero-slide-inner">
+          <div class="hero-text">
+            <p class="hero-eyebrow">Curitiba e região</p>
+            <h1>Preços que cabem<br>no seu <span>orçamento!</span></h1>
+            <p class="hero-sub">Jogo de mesa a partir de R$ 15,00. Quanto mais jogos, menor o preço. Solicite um orçamento agora!</p>
+            <div class="hero-actions">
+              <a href="https://wa.me/5541987147287?text=Olá!%20Quero%20um%20orçamento." class="btn-primary" target="_blank">💬 Chamar no WhatsApp</a>
+              <a href="#precos" class="btn-ghost">Ver Preços</a>
+            </div>
           </div>
-          <div class="slide">
+          <div class="hero-img-wrap logo-slide">
             <img src="logo.png" alt="Zé Locações" />
           </div>
         </div>
-        <div class="slider-dots" id="sliderDots">
-          <button class="dot active" onclick="goTo(0)"></button>
-          <button class="dot" onclick="goTo(1)"></button>
-        </div>
-        <button class="slider-arrow left" onclick="prevSlide()">&#8249;</button>
-        <button class="slider-arrow right" onclick="nextSlide()">&#8250;</button>
       </div>
+
     </div>
+
+    <!-- CONTROLES -->
+    <button class="hero-arrow left" onclick="prevSlide()">&#8249;</button>
+    <button class="hero-arrow right" onclick="nextSlide()">&#8250;</button>
+    <div class="hero-dots">
+      <button class="dot active" onclick="goTo(0)"></button>
+      <button class="dot" onclick="goTo(1)"></button>
+    </div>
+
   </section>
 
   <!-- DIFERENCIAIS -->

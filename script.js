@@ -1,18 +1,17 @@
-// ── SLIDER ──
+// ── HERO SLIDER FULL WIDTH ──
 let currentSlide = 0;
-const slides = document.querySelectorAll('.slide');
-const dots   = document.querySelectorAll('.dot');
+const heroSlides = document.querySelectorAll('.hero-slide');
+const dots = document.querySelectorAll('.dot');
 
 function goTo(n) {
-  currentSlide = (n + slides.length) % slides.length;
+  currentSlide = (n + heroSlides.length) % heroSlides.length;
   document.getElementById('sliderTrack').style.transform = `translateX(-${currentSlide * 100}%)`;
   dots.forEach((d, i) => d.classList.toggle('active', i === currentSlide));
 }
 function nextSlide() { goTo(currentSlide + 1); }
 function prevSlide() { goTo(currentSlide - 1); }
 
-// Auto-play a cada 4s
-setInterval(nextSlide, 4000);
+setInterval(nextSlide, 5000);
 
 // ── MENU MOBILE
 document.getElementById('hamburger').addEventListener('click', () => {
