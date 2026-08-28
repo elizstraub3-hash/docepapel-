@@ -212,8 +212,13 @@ body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--b
   padding: 20px 0;
 }
 .strip-grid {
-  display: flex; justify-content: space-between;
-  gap: 16px; flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+@media (max-width: 700px) {
+  .strip-grid { grid-template-columns: repeat(2, 1fr); gap: 12px 8px; }
+  .strip-item { justify-content: center; font-size: 0.82rem; }
 }
 .strip-item {
   display: flex; align-items: center; gap: 10px;
@@ -279,7 +284,21 @@ body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--b
 .card li:last-child { border: none; }
 
 /* ── PREÇOS ── */
+.price-toggle {
+  display: flex; align-items: center; justify-content: space-between;
+  width: 100%; padding: 18px 24px;
+  background: var(--dark); color: white;
+  border: none; border-radius: var(--radius);
+  font-size: 1rem; font-weight: 700; font-family: 'Inter', sans-serif;
+  cursor: pointer; margin-bottom: 16px;
+  transition: background 0.2s;
+}
+.price-toggle:hover { background: #2d2d44; }
+.toggle-arrow { font-size: 0.85rem; transition: transform 0.3s; }
+.price-toggle[aria-expanded="true"] .toggle-arrow { transform: rotate(180deg); }
+
 .price-rows { display: flex; flex-direction: column; gap: 14px; margin-bottom: 28px; }
+.price-row-icon { display: none; }
 
 .price-row {
   display: flex; align-items: center; gap: 20px;

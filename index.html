@@ -165,19 +165,21 @@
       <h2 class="section-title">Tabela de Preços</h2>
       <p class="section-sub">Jogo de mesa = 1 mesa + 4 cadeiras. Quanto mais jogos, menor o preço!</p>
 
-      <div class="price-rows">
+      <button class="price-toggle" onclick="togglePrecos(this)" aria-expanded="false">
+        Ver Tabela de Preços <span class="toggle-arrow">▼</span>
+      </button>
+
+      <div class="price-rows" id="price-rows" hidden>
 
         <div class="price-row pink-row">
-          <div class="price-row-icon">🪑🪵</div>
           <div class="price-row-info">
             <strong>Jogo de Mesas</strong>
-            <span>até 3 jogos</span>
+            <span>até 3 jogos · 1 mesa + 4 cadeiras</span>
           </div>
           <div class="price-row-value">R$ 25,00 <small>/jogo</small></div>
         </div>
 
         <div class="price-row blue-row">
-          <div class="price-row-icon">🪑🪵</div>
           <div class="price-row-info">
             <strong>Jogo de Mesas</strong>
             <span>acima de 3 até 10 jogos</span>
@@ -186,7 +188,6 @@
         </div>
 
         <div class="price-row yellow-row">
-          <div class="price-row-icon">🪑🪵</div>
           <div class="price-row-info">
             <strong>Jogo de Mesas</strong>
             <span>acima de 10 jogos</span>
@@ -195,7 +196,6 @@
         </div>
 
         <div class="price-row pink-row">
-          <div class="price-row-icon">🪑</div>
           <div class="price-row-info">
             <strong>Cadeira Avulsa</strong>
             <span>branca · plástica · tamanho único</span>
@@ -204,7 +204,6 @@
         </div>
 
         <div class="price-row blue-row">
-          <div class="price-row-icon">🪵</div>
           <div class="price-row-info">
             <strong>Mesa Avulsa</strong>
             <span>plástica quadrada · branca</span>

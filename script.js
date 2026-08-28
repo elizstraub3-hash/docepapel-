@@ -64,6 +64,15 @@ function enviar(e) {
   window.open(`https://wa.me/5541987147287?text=${encodeURIComponent(texto)}`, '_blank');
 }
 
+// Acordeão tabela de preços
+function togglePrecos(btn) {
+  const rows = document.getElementById('price-rows');
+  const open = btn.getAttribute('aria-expanded') === 'true';
+  btn.setAttribute('aria-expanded', !open);
+  btn.querySelector('.toggle-arrow').textContent = open ? '▼' : '▲';
+  rows.hidden = open;
+}
+
 // Scroll suave
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {
