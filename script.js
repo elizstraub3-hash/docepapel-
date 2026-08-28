@@ -1,4 +1,15 @@
-// slider removido — apenas 1 slide
+// Depoimentos slide
+let depAtual = 0;
+const deps = document.querySelectorAll('.dep-slide');
+function depGoTo(n) {
+  deps.forEach((d, i) => d.classList.toggle('dep-active', i === n));
+  document.querySelectorAll('.dep-dot').forEach((d, i) => d.classList.toggle('active', i === n));
+  depAtual = n;
+}
+if (deps.length) {
+  depGoTo(0);
+  setInterval(() => depGoTo((depAtual + 1) % deps.length), 4000);
+}
 
 // ── MENU MOBILE
 document.getElementById('hamburger').addEventListener('click', () => {

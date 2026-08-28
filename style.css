@@ -261,11 +261,48 @@ body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--b
 .green-bg { background: #E3F5E7; }
 
 .card h3 { font-size: 1.05rem; font-weight: 700; color: var(--dark); margin-bottom: 10px; }
-.card p   { font-size: 0.88rem; color: var(--muted); line-height: 1.65; margin-bottom: 18px; }
-.card ul  { list-style: none; padding: 0; }
+.card p   { font-size: 0.88rem; color: var(--muted); line-height: 1.65; margin-bottom: 14px; }
+.card ul  { list-style: none; padding: 0; margin-top: 12px; }
 .card li  { font-size: 0.85rem; color: var(--text); padding: 5px 0; border-bottom: 1px solid #F3F4F6; }
 .card li::before { content: '—  '; color: var(--pink); font-weight: 700; }
 .card li:last-child { border: none; }
+
+
+/* ── DEPOIMENTOS ── */
+.dep-slider { position: relative; max-width: 680px; margin: 0 auto; }
+.dep-slide { display: none; }
+.dep-slide.dep-active { display: block; animation: depFade 0.4s ease; }
+@keyframes depFade { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+.dep-card {
+  background: white; border-radius: var(--radius);
+  padding: 40px 40px 32px; box-shadow: var(--shadow);
+  border-top: 4px solid var(--pink);
+  text-align: center;
+}
+.dep-text {
+  font-size: 1.05rem; color: var(--text); line-height: 1.75;
+  font-style: italic; margin-bottom: 28px;
+}
+.dep-text::before { content: '\201C'; color: var(--pink); font-size: 2rem; line-height: 0; vertical-align: -0.5rem; margin-right: 4px; }
+.dep-text::after  { content: '\201D'; color: var(--pink); font-size: 2rem; line-height: 0; vertical-align: -0.5rem; margin-left:  4px; }
+.dep-author {
+  display: flex; align-items: center; gap: 14px;
+  justify-content: center;
+}
+.dep-avatar {
+  width: 48px; height: 48px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.2rem; font-weight: 800; color: white; flex-shrink: 0;
+}
+.dep-author strong { display: block; font-size: 0.95rem; color: var(--dark); }
+.dep-author span   { font-size: 0.82rem; color: var(--muted); }
+.dep-dots { display: flex; gap: 10px; justify-content: center; margin-top: 24px; }
+.dep-dot {
+  width: 10px; height: 10px; border-radius: 50%;
+  background: #E2E8F0; border: none; cursor: pointer; padding: 0;
+  transition: background 0.2s, transform 0.2s;
+}
+.dep-dot.active { background: var(--pink); transform: scale(1.25); }
 
 /* ── PREÇOS ── */
 .price-toggle {
