@@ -545,7 +545,21 @@ a.footer-wpp-link:hover { color: var(--pink); }
   .hero-sub          { margin: 0 auto 36px; }
   .hero-actions      { justify-content: center; }
   .hero-sub          { margin: 0 auto 36px; }
-  .cards-grid        { grid-template-columns: 1fr; }
+  .cards-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    padding-bottom: 16px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .cards-grid::-webkit-scrollbar { display: none; }
+  .cards-grid .card {
+    min-width: 80vw;
+    scroll-snap-align: center;
+    flex-shrink: 0;
+  }
   .price-tables      { grid-template-columns: 1fr; }
   .contato-wrap      { grid-template-columns: 1fr; gap: 40px; }
   .nav               { display: none; }
