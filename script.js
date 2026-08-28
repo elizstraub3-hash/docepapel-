@@ -41,10 +41,9 @@ function enviar(e) {
 
   const dataFmt = new Date(data + 'T12:00:00').toLocaleDateString('pt-BR');
 
-  // Cálculo automático do preço estimado
+  // Cálculo automático do preço estimado (cadeira R$50 + mesa R$80 = R$280/jogo)
   const qtd = parseInt(jogos);
-  let precoJogo = qtd > 10 ? 15 : qtd > 3 ? 20 : 25;
-  const totalEstimado = (qtd * precoJogo).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+  const totalEstimado = (qtd * 280).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
 
   const texto = [
     'Olá, Zé Locações! 🎉 Quero fazer um orçamento:',

@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Zé Locações – Mesas e Cadeiras</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -14,7 +15,7 @@
   <header class="header">
     <div class="container nav-wrap">
       <div class="logo">
-        <img src="logo.png" alt="Zé Locações" class="logo-img"
+        <img src="logo.png" alt="Zé Locações" class="logo-img" fetchpriority="high"
           onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
         <span class="logo-text" style="display:none">
           <span class="z">Z</span><span class="e">é</span> <span class="loc">Locações</span>
@@ -59,7 +60,7 @@
             </div>
           </div>
           <div class="hero-img-wrap">
-            <video class="casal-video" src="casal.mp4" autoplay muted loop playsinline></video>
+            <video class="casal-video" src="casal.mp4" autoplay muted loop playsinline preload="metadata"></video>
           </div>
         </div>
       </div>
@@ -126,22 +127,22 @@
         <div class="card">
           <div class="card-icon blue-bg">🪵</div>
           <h3>Mesas</h3>
-          <p>Mesas plásticas, redondas e bistrô para todos os formatos de evento, indoor ou outdoor.</p>
+          <p>Mesa plástica quadrada, branca. Resistente e higienizada para qualquer tipo de evento, indoor ou outdoor.</p>
           <ul>
-            <li>Mesa Plástica 1,80m</li>
-            <li>Mesa Redonda 1,20m</li>
-            <li>Mesa Bistrô (alta)</li>
+            <li>Mesa plástica quadrada</li>
+            <li>Cor: branca</li>
+            <li>Ideal para festas e eventos</li>
           </ul>
         </div>
 
         <div class="card">
           <div class="card-icon peach-bg">💰</div>
           <h3>Preço por Volume</h3>
-          <p>Quanto mais jogos, mais barato! O jogo inclui 1 mesa + 4 cadeiras.</p>
+          <p>Quanto mais jogos, mais barato! O jogo inclui 1 mesa quadrada + 4 cadeiras plásticas brancas.</p>
           <ul>
-            <li>Até 3 jogos: R$ 25,00/jogo</li>
-            <li>De 4 a 10 jogos: R$ 20,00/jogo</li>
-            <li>Acima de 10 jogos: R$ 15,00/jogo</li>
+            <li>Cadeira avulsa: R$ 50,00/unid.</li>
+            <li>Mesa avulsa: R$ 80,00/unid.</li>
+            <li>Solicite orçamento para pacotes!</li>
           </ul>
         </div>
 
@@ -151,7 +152,7 @@
 
   <!-- FOTO REAL -->
   <div class="festa-banner">
-    <img src="festa.jpg" alt="Mesas e cadeiras montadas em evento real – Zé Locações" />
+    <img src="festa.jpg" alt="Mesas e cadeiras montadas em evento real – Zé Locações" loading="lazy" />
     <div class="festa-overlay">
       <p>✨ Assim fica o seu evento com a Zé Locações!</p>
     </div>
@@ -197,18 +198,18 @@
           <div class="price-row-icon">🪑</div>
           <div class="price-row-info">
             <strong>Cadeira Avulsa</strong>
-            <span>branca · tamanho único</span>
+            <span>branca · plástica · tamanho único</span>
           </div>
-          <div class="price-row-value">R$ 5,00 <small>/unid.</small></div>
+          <div class="price-row-value">R$ 50,00 <small>/unid.</small></div>
         </div>
 
         <div class="price-row blue-row">
           <div class="price-row-icon">🪵</div>
           <div class="price-row-info">
             <strong>Mesa Avulsa</strong>
-            <span>unidade</span>
+            <span>plástica quadrada · branca</span>
           </div>
-          <div class="price-row-value">R$ 10,00 <small>/unid.</small></div>
+          <div class="price-row-value">R$ 80,00 <small>/unid.</small></div>
         </div>
 
       </div>
@@ -395,7 +396,7 @@
   <footer class="footer">
     <div class="container footer-inner">
       <div class="footer-logo">
-        <img src="logo.png" alt="Zé Locações" style="height:48px"
+        <img src="logo.png" alt="Zé Locações" style="height:48px" loading="lazy"
           onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
         <span style="display:none;font-weight:800;color:white">Zé Locações</span>
       </div>

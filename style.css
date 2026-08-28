@@ -473,4 +473,8 @@ body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--b
 @media (max-width: 600px) {
   .hero              { padding: 60px 0 50px; }
   .section           { padding: 64px 0; }
+  /* Desativa imagens de fundo pesadas no mobile para carregar mais rápido */
+  .slide-bg          { display: none; }
+  .bg-soft::before   { display: none; }
+  .festa-banner      { height: 220px; }
 }
