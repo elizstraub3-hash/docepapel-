@@ -173,29 +173,37 @@ body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--b
 .card li:last-child { border: none; }
 
 /* ── PREÇOS ── */
-.price-tables { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 20px; }
+.price-rows { display: flex; flex-direction: column; gap: 14px; margin-bottom: 28px; }
 
-.price-block {
-  background: white; border-radius: var(--radius);
-  overflow: hidden; box-shadow: var(--shadow);
-}
-.price-block-header {
-  padding: 20px 24px; display: flex; align-items: center; gap: 12px;
+.price-row {
+  display: flex; align-items: center; gap: 20px;
+  padding: 20px 28px; border-radius: 14px;
+  background: white; box-shadow: var(--shadow);
   border-left: 5px solid transparent;
 }
-.pink-border  { border-left-color: var(--pink);  background: #FDF2F7; }
-.blue-border  { border-left-color: var(--blue);  background: #EFF8FB; }
-.peach-border { border-left-color: var(--peach); background: #FDF4EE; }
+.pink-row   { border-left-color: var(--pink);  }
+.blue-row   { border-left-color: var(--blue);  }
+.yellow-row { border-left-color: #F9D56E;       }
 
-.price-icon { font-size: 1.3rem; }
-.price-block-header h3 { font-size: 1rem; font-weight: 700; color: var(--dark); }
+.price-row-icon { font-size: 1.8rem; flex-shrink: 0; width: 48px; text-align: center; }
 
-.price-table { width: 100%; border-collapse: collapse; }
-.price-table td { padding: 12px 24px; font-size: 0.88rem; border-bottom: 1px solid #F3F4F6; }
-.price-table tr:last-child td { border: none; }
-.price-table td.price { font-weight: 700; color: var(--peach); text-align: right; white-space: nowrap; }
+.price-row-info { flex: 1; }
+.price-row-info strong { display: block; font-size: 1rem; font-weight: 700; color: var(--dark); }
+.price-row-info span   { font-size: 0.85rem; color: var(--muted); }
 
-.price-obs { font-size: 0.8rem; color: var(--muted); margin-top: 6px; }
+.price-row-value {
+  font-size: 1.5rem; font-weight: 800; color: var(--dark);
+  white-space: nowrap; text-align: right;
+}
+.price-row-value small { font-size: 0.75rem; font-weight: 400; color: var(--muted); }
+
+.price-obs-box {
+  display: flex; align-items: center; gap: 14px;
+  background: #FFF3E0; border-radius: 12px;
+  padding: 18px 24px; border-left: 4px solid #F9D56E;
+}
+.price-obs-box span { font-size: 1.5rem; }
+.price-obs-box p { font-size: 0.92rem; color: var(--text); }
 
 /* ── CONTATO ── */
 .contato-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
