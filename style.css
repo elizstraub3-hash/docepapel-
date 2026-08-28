@@ -87,7 +87,53 @@ body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--b
 .hero-sub { font-size: 1rem; color: var(--muted); line-height: 1.7; margin-bottom: 36px; max-width: 480px; }
 .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
 
-.hero-logo img { width: 100%; max-width: 420px; height: auto; filter: drop-shadow(0 16px 40px rgba(244,140,176,0.25)); }
+/* ── SLIDER HERO ── */
+.hero-slider {
+  position: relative;
+  width: 100%; max-width: 460px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 16px 48px rgba(0,0,0,0.12);
+  background: #f5f0f8;
+  aspect-ratio: 1 / 1;
+}
+.slider-track {
+  display: flex;
+  transition: transform 0.5s cubic-bezier(0.4,0,0.2,1);
+  height: 100%;
+}
+.slide {
+  min-width: 100%; height: 100%;
+  display: flex; align-items: center; justify-content: center;
+}
+.slide img {
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: center top;
+}
+
+.slider-arrow {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  background: rgba(255,255,255,0.85); border: none; cursor: pointer;
+  width: 40px; height: 40px; border-radius: 50%;
+  font-size: 1.4rem; color: var(--dark);
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.12);
+  transition: background 0.2s; z-index: 2;
+}
+.slider-arrow:hover { background: white; }
+.slider-arrow.left  { left: 12px; }
+.slider-arrow.right { right: 12px; }
+
+.slider-dots {
+  position: absolute; bottom: 14px; left: 50%; transform: translateX(-50%);
+  display: flex; gap: 8px; z-index: 2;
+}
+.dot {
+  width: 10px; height: 10px; border-radius: 50%;
+  border: none; cursor: pointer;
+  background: rgba(255,255,255,0.5); transition: all 0.3s;
+}
+.dot.active { background: white; transform: scale(1.3); }
 
 /* ── BOTÕES ── */
 .btn-primary {
@@ -269,8 +315,7 @@ body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--b
 /* ── RESPONSIVO ── */
 @media (max-width: 900px) {
   .hero-inner        { grid-template-columns: 1fr; text-align: center; }
-  .hero-logo         { display: flex; justify-content: center; }
-  .hero-logo img     { max-width: 280px; }
+  .hero-slider       { max-width: 320px; margin: 0 auto; }
   .hero-actions      { justify-content: center; }
   .hero-sub          { margin: 0 auto 36px; }
   .cards-grid        { grid-template-columns: 1fr; }

@@ -1,4 +1,20 @@
-// Menu mobile
+// ── SLIDER ──
+let currentSlide = 0;
+const slides = document.querySelectorAll('.slide');
+const dots   = document.querySelectorAll('.dot');
+
+function goTo(n) {
+  currentSlide = (n + slides.length) % slides.length;
+  document.getElementById('sliderTrack').style.transform = `translateX(-${currentSlide * 100}%)`;
+  dots.forEach((d, i) => d.classList.toggle('active', i === currentSlide));
+}
+function nextSlide() { goTo(currentSlide + 1); }
+function prevSlide() { goTo(currentSlide - 1); }
+
+// Auto-play a cada 4s
+setInterval(nextSlide, 4000);
+
+// ── MENU MOBILE
 document.getElementById('hamburger').addEventListener('click', () => {
   document.getElementById('mobileNav').classList.toggle('open');
 });
